@@ -6,8 +6,7 @@ def main():
 
     cur.execute('''CREATE TABLE IF NOT EXISTS chats (
         nickname TEXT UNIQUE,
-        host TEXT,
-        port INT
+        socket TEXT,
         status TEXT)
     ''')
     db.commit()
