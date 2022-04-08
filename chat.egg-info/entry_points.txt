@@ -1,0 +1,4 @@
+[console_scripts]
+client = chat.chatclient:main
+server = chat.server:run_server
+

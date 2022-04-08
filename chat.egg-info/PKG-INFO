@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: ChatApp
-Version: 0.1.0
+Name: chat
+Version: 0.1.1
 Summary: This is a simple client/server chat with asyncio and threading.
 Home-page: https://github.com/192117/tasks_from_raidix
 Author: Kalimullin Artur

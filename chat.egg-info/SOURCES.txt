@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+chat/__init__.py
+chat/chat_logger.py
+chat/chatclient.py
+chat/server.py
+chat.egg-info/PKG-INFO
+chat.egg-info/SOURCES.txt
+chat.egg-info/dependency_links.txt
+chat.egg-info/entry_points.txt
+chat.egg-info/top_level.txt

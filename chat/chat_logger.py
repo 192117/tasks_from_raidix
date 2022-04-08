@@ -8,7 +8,8 @@ def create_logger():
 
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(message)s')
 
-    sys_handler = logging.handlers.SysLogHandler(address='/dev/log')
+    sys_handler = logging.handlers.SysLogHandler(address='/dev/log') # Unix
+    # sys_handler = logging.FileHandler('chat.log') # Windows
     sys_handler.setLevel('DEBUG')
     sys_handler.setFormatter(formatter)
 
