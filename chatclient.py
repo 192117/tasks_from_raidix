@@ -15,14 +15,19 @@ def read():
         print('Connection error')
         sock.close()
 
-thread_read = Thread(target=read)
-thread_read.start()
+def main():
+    thread_read = Thread(target=read)
+    thread_read.start()
 
-try:
-    while True:
-        message = input()
-        sock.send(message.encode())
-except EOFError:
-    pass
-finally:
-    sock.close()
+    try:
+        while True:
+            message = input()
+            sock.send(message.encode())
+    except EOFError:
+        pass
+    finally:
+        sock.close()
+
+
+if __name__ == '__main__':
+    main()
