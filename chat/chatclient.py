@@ -7,6 +7,7 @@ sock = socket(AF_INET, SOCK_STREAM)
 sock.connect((host, port))
 
 def read():
+    ''' Чтение сообщений от сервера. '''
     try:
         while True:
             message = sock.recv(1024).decode()
@@ -16,6 +17,7 @@ def read():
         sock.close()
 
 def main():
+    ''' Запуск потоков на прием сообщений от сервера и отправка сообщений на сервер-чат. '''
     thread_read = Thread(target=read)
     thread_read.start()
 

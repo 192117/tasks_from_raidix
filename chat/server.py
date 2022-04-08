@@ -1,6 +1,6 @@
 import asyncio
 from datetime import datetime
-from chat_logger import create_logger
+from chat.chat_logger import create_logger
 
 
 class ServerProtocol(asyncio.Protocol):
@@ -70,6 +70,7 @@ class ServerProtocol(asyncio.Protocol):
 
 
     def make_message(self, message=None, author=None, event=None):
+        ''' Форматирование сообщений клиента и сервера для отправки клиентам.'''
         if event == 'connect':
             msg = '{}: {} connected!'.format(datetime.now().strftime('%Y-%m-%d %H:%M'), message)
             return msg.encode()
@@ -98,6 +99,7 @@ class ServerProtocol(asyncio.Protocol):
 
 
 def run_server():
+    ''' Запуск сервера. '''
     logger = create_logger()
     clients = []
     loop = asyncio.get_event_loop()

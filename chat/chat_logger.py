@@ -6,7 +6,6 @@ def create_logger():
     logger = logging.getLogger('chat_app')
     logger.setLevel('DEBUG')
 
-
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(message)s')
 
     sys_handler = logging.handlers.SysLogHandler(address='/dev/log')
