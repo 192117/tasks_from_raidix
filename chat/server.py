@@ -1,6 +1,6 @@
 import asyncio
 from datetime import datetime
-from chat_logger import create_logger
+from chat.chat_logger import create_logger
 
 
 class ServerProtocol(asyncio.Protocol):
