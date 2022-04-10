@@ -10,7 +10,7 @@ def create_logger():
 
     format = '%(asctime)s - %(name)s - %(message)s'
 
-    sys_handler = SysLogHandler(facility=SysLogHandler.LOG_DAEMON, address='/dev/log') # Unix
+    sys_handler = SysLogHandler(facility=SysLogHandler.LOG_DAEMON) # Unix
     # sys_handler = logging.FileHandler('chat.log') # Windows
     sys_handler.setLevel('INFO')
     sys_handler.setFormatter(Formatter(fmt=format))

@@ -26,6 +26,12 @@ _Для Oracle Linux:_
 pip install git+https://github.com/192117/tasks_from_raidix.git#egg=chat
 ```
 
+или скачайте архив [chat-0.2.0.tar.gz](https://github.com/192117/tasks_from_raidix/tree/master/dist) расположите его в
+требуемой директории (той, где вы хотите запустить) и выполните команду:
+```
+pip install {path_to_file}\chat-0.2.0.tar.gz
+```
+
 _Для Windows:_
 
 Скачайте архив [chat-0.2.1.zip](https://github.com/192117/tasks_from_raidix/tree/master/dist) расположите его в

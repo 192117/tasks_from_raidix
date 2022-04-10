@@ -6,8 +6,8 @@ from chat.chat_logger import create_logger
 class ServerProtocol(asyncio.Protocol):
 
     def __init__(self, clients, logger):
-        self.logger = logger
         self.clients = clients
+        self.logger = logger
         self.user = None
 
 
@@ -22,8 +22,7 @@ class ServerProtocol(asyncio.Protocol):
         if isinstance(exc, ConnectionResetError):
             self.clients.pop(self.user)
         else:
-            print('Error')
-            print(exc)
+            pass
         message = self.make_message(message=self.user, event='disconnect')
         for client in self.clients:
             if client != self.user:
@@ -108,8 +107,8 @@ class ServerProtocol(asyncio.Protocol):
 
 def run_server():
     ''' Запуск сервера. '''
-    logger = create_logger()
     clients = dict()
+    logger = create_logger()
     loop = asyncio.get_event_loop()
     coro = loop.create_server(lambda: ServerProtocol(clients, logger), '127.0.0.1', 8000)
     print('Server is ready for work!')
